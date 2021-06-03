@@ -12,11 +12,32 @@ export const Container = styled.div`
 
 export const GitIcon = styled(Github)`
   fill: var(--logo);
-  height: 32px;
-  width: 32px;
+  height: 38px;
+  width: 38px;
   flex-shrink: 0;
   margin-right: 10px;
   cursor: pointer;
+`;
+
+export const NavMenu = styled.div`
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+    @media (max-width: 692px) {
+      display: none;
+    }
+`
+
+export const NavLink = styled.strong`
+  color: var(--primary);
+  font-size: 14px;
+  cursor: pointer;
+  transition: 0.2s;
+  padding: 0 12px;
+  &:hover {
+    opacity: 0.7;
+  }
 `;
 
 export const SearchBar = styled.input`
