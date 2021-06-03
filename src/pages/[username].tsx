@@ -4,6 +4,10 @@ import Image from 'next/image'
 import { useEffect, useState } from 'react'
 import Footer from '../components/Footer'
 import Header from '../components/Header'
+import ProfileInfo from '../components/ProfileInfo'
+import RepoItem from '../components/RepoItem'
+import Tab from '../components/Tab'
+import User from '../templates/User'
 
 
 
@@ -15,7 +19,7 @@ const UserProfile = () => {
   useEffect(() => {
     Promise.all([
       fetch(`https://api.github.com/users/${username}`),
-      fetch(`https://api.github.com/users/${username}/repos`),
+      fetch(`https://api.github.com/users/${username}/repos?sort=pushed`),
     ]).then(async responses => {
       const [userResponse, reposResponse] = responses;
 
@@ -27,28 +31,27 @@ const UserProfile = () => {
       const user = await userResponse.json();
       const repos = await reposResponse.json();
 
-      const shuffledRepos = repos.sort(() => 0.50 - Math.random());
-      const slicedRepos = shuffledRepos.slice(0, 6);
-
       setData({
         user,
-        repos: slicedRepos,
+        repos
       });
     });
   }, [username]);
 
+  if (!data?.user || !data?.repos) {
+    return <h1>Loading...</h1>
+  }
+
   return (
-    <div>
-      <main>
-        <h1>Start - {username}</h1>
-      </main>
+    <User user={data.user} repos={data.repos} >
+      <div>
+        {data?.repos?.map(repo => (<RepoItem repo={repo} />))}
+      </div>
 
-      <pre>
+      {/* <pre>
         {JSON.stringify(data, null, 2 )}
-      </pre>
-
-      <Footer />
-    </div>
+      </pre> */}
+    </User>
   )
 }
 

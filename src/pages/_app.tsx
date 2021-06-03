@@ -7,7 +7,7 @@ import Layout from '../layouts'
 function MyApp({ Component, pageProps }: AppProps) {
   return (
     <>
-      <ThemeProvider theme={themes.light}>
+      <ThemeProvider theme={themes.dark}>
         <GlobalStyles />
         <Layout>
           <Component {...pageProps} />
