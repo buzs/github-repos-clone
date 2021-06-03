@@ -36,21 +36,30 @@ export const themes = {
       orange: '#fff',
   
       header: '#181818',
+      'header-text': '#cdd9e5',
       logo: '#fff',
       username: '#9b9b9b',
-      search: '#151515',
+      search: '#0e0e0e',
       'search-placeholder': '#c6c6c6',
       icon: '#9b9b9b',
       link: 'rgb(79, 140, 201)',
+      'text-primary': '#adbac7',
       'text-secondary': '#768390',
       border: '#343434',
+      'border-primary': '#444c56',
+      'avatar-border': 'rgba(205, 217, 229, 0.1)',
       ticker: 'rgba(90, 90, 90, .5)',
+
 
       'btn-text': '#adbac7',
       'btn-bg': '#3d444d',
-      'btn-bg-hover': '#444c56',
+      'btn-hover-bg': '#444c56',
       'btn-border': '#444c56',
       'btn-border-hover': '#768390',
+
+      'topic-tag-text': '#539bf5',
+      'topic-tag-bg': 'rgba(65, 132, 228, 0.1)',
+      'topic-tag-hover-bg': 'rgba(65, 132, 228, 0.2)',
   
       'calendar-scale-0': '#282828',
       'calendar-scale-1': 'rgba(79, 140, 201, 0.25)',
@@ -60,7 +69,14 @@ export const themes = {
   
       javascript: '#f1e05a',
       typescript: '#2b7489',
-      'other-language': '#8257e5',
+      scss: '#c6538a',
+      go: '#00add8',
+      elixir: '#6e4a7e',
+      html: '#e34c26',
+      'c#': '#178600',
+      python: '#3572A5',
+      'c++': '#f34b7d',
+      'other-language': '#824',
     },
   };
   
