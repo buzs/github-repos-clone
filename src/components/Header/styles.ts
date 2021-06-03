@@ -3,7 +3,7 @@ import {Github} from '@styled-icons/boxicons-logos/Github'
 
 export const Container = styled.div`
     height: 64px;
-    padding: 11px 16px;
+    padding: 11px 32px;
     background-color: var(--header);
     display: flex;
     align-items: center;
@@ -12,10 +12,10 @@ export const Container = styled.div`
 
 export const GitIcon = styled(Github)`
   fill: var(--logo);
-  height: 38px;
-  width: 38px;
+  height: 42px;
+  width: 42px;
   flex-shrink: 0;
-  margin-right: 10px;
+  margin-right: 18px;
   cursor: pointer;
 `;
 
@@ -30,8 +30,10 @@ export const NavMenu = styled.div`
 `
 
 export const NavLink = styled.strong`
-  color: var(--primary);
-  font-size: 14px;
+  color: var(--black);
+  font-weight: 600;
+  white-space: nowrap;
+  font-size: 16px;
   cursor: pointer;
   transition: 0.2s;
   padding: 0 12px;
@@ -43,8 +45,11 @@ export const NavLink = styled.strong`
 export const SearchBar = styled.input`
   max-width: 400px;
   min-width: 242px;
-  width: 20%;
+  width: 25%;
   height: 30px;
+  font-size: 15px;
+  margin-right: 10px;
+
   background-color: var(--search);
   color: var(--primary);
   padding: 0 12px;
