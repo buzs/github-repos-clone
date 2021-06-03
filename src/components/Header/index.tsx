@@ -1,10 +1,14 @@
-import { Container } from './styles'
+import * as S from './styles'
+
 
 const Header: React.FC = () => {
     return (
-        <Container>
-            HEADER
-        </Container>
+        <S.Container>
+            <S.GitIcon />
+            <S.SearchBar
+                placeholder="Search or jump to..."
+            />
+        </S.Container>
     )  
 }
 
