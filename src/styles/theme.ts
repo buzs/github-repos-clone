@@ -42,8 +42,15 @@ export const themes = {
       'search-placeholder': '#c6c6c6',
       icon: '#9b9b9b',
       link: 'rgb(79, 140, 201)',
+      'text-secondary': '#768390',
       border: '#343434',
       ticker: 'rgba(90, 90, 90, .5)',
+
+      'btn-text': '#adbac7',
+      'btn-bg': '#3d444d',
+      'btn-bg-hover': '#444c56',
+      'btn-border': '#444c56',
+      'btn-border-hover': '#768390',
   
       'calendar-scale-0': '#282828',
       'calendar-scale-1': 'rgba(79, 140, 201, 0.25)',
