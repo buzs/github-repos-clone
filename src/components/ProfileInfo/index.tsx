@@ -1,5 +1,5 @@
 import { Twitter } from '@styled-icons/boxicons-logos'
-import { Link } from '../Footer/styles'
+import { People, Location, Link, Organization } from '@styled-icons/octicons'
 import * as S from './styles'
 
 type ProfileInfoProps = {
@@ -33,7 +33,7 @@ const ProfileInfo: React.FC<ProfileInfoProps> = ({ user }) => {
                         <S.FollowButton>Follow</S.FollowButton>
                         <S.AvatarValues>
                             <S.AvatarValue>
-                                <strong>{user.followers}</strong> followers
+                                <People width={20} /> <strong>{user.followers}</strong> followers
                             </S.AvatarValue>
                             <S.AvatarValue>
                                 <strong>{user.following}</strong> following
@@ -47,13 +47,13 @@ const ProfileInfo: React.FC<ProfileInfoProps> = ({ user }) => {
                 <S.AvatarDetails>
                     <S.AvatarDetail>
                         <a href={`http://github.com/${user.company?.substring(1)}`}>
-                            <strong>{user.company}</strong>
+                            <Organization width={18} /><strong>{user.company}</strong>
                         </a>
                     </S.AvatarDetail>
                     {
                         user.location ? (
                             <S.AvatarDetail>
-                                {user.location}
+                               <Location width={18} /> {user.location}
                             </S.AvatarDetail>
                         ) : null
                     }
@@ -65,12 +65,12 @@ const ProfileInfo: React.FC<ProfileInfoProps> = ({ user }) => {
                         ) : null
                     }
                     <S.AvatarDetail>
-                        <a href={`http://${user.blog}`}>{user.blog}</a>
+                        <Link width={18}/> <a href={`http://${user.blog}`}>{user.blog}</a>
                     </S.AvatarDetail>
                     {
                         user.twitter_username ? (
                             <S.AvatarDetail>
-                                <Twitter width={25} />
+                                <Twitter width={20} />
                                 <a href={`https://twitter.com/${user.twitter_username}`}>
                                     @{user.twitter_username}
                                 </a>

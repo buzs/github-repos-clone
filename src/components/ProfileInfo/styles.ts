@@ -92,12 +92,10 @@ export const FollowButton = styled.button`
 
     color: var(--btn-text);
     background-color: var(--btn-bg);
-    border-color: var(--btn-border);
     transition: .2s cubic-bezier(.3,0,.5,1);
-    transition-property: color,background-color,border-color;
 
     user-select: none;
-    border: 1px solid;
+    border: 1px solid var(--btn-border);
     border-radius: 6px;
 
     position: relative;
@@ -155,7 +153,7 @@ export const AvatarDetails = styled.ul`
 `
 
 export const AvatarDetail = styled.li`
-    padding-left: 22px;
+    /* padding-left: 22px; */
     font-size: 18px;
     padding-top: 4px;
 
