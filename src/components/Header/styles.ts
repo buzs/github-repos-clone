@@ -8,6 +8,11 @@ export const Container = styled.div`
     display: flex;
     align-items: center;
     justify-content: space-between;
+
+    @media (max-width: 692px) {
+      justify-content: center;
+      margin-bottom: 5px;
+    }
 `
 
 export const GitIcon = styled(Github)`
@@ -17,6 +22,14 @@ export const GitIcon = styled(Github)`
   flex-shrink: 0;
   margin-right: 18px;
   cursor: pointer;
+
+  &:hover {
+    opacity: 0.7;
+  }
+
+  @media (max-width: 692px) {
+    margin: 0;
+  }
 `;
 
 export const NavMenu = styled.div`
