@@ -4,13 +4,13 @@ export const Container = styled.li`
     display: flex;
     align-items: center;
     justify-content: space-between;
-    width: 100%;
 
     border-top: 1px solid var(--border);
-    padding: 24px 15px;
-
+    padding: 24px 0px;
+    margin: 0 15px;
     @media (min-width: 768px) {
-        padding: 24px 0;
+        width: 100%;
+        margin: 0;
     }
 `
 

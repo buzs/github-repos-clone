@@ -157,6 +157,9 @@ export const AvatarValues = styled.div`
     margin:16px 0;
     display: flex;
     gap: 10px;
+    svg {
+        fill: var(--tertiary);
+    }
 `
 
 export const AvatarBio = styled.div`
@@ -182,7 +185,7 @@ export const AvatarDetails = styled.ul`
 
 export const AvatarDetail = styled.li`
     /* padding-left: 22px; */
-    font-size: 18px;
+    font-size: 16px;
     padding-top: 4px;
 
     overflow: hidden;
@@ -195,7 +198,16 @@ export const AvatarDetail = styled.li`
     max-width: 100%;
 
     svg {
-        margin-right: 6px;
+        margin-right: 2px;
+        fill: var(--tertiary);
+    }
+
+    @media (min-width: 768px) {
+        font-size: 18px;
+        
+        svg {
+            margin-right: 6px;
+        }
     }
 
     > a {
@@ -203,6 +215,7 @@ export const AvatarDetail = styled.li`
         text-decoration: none;
 
         > strong {
+            padding-left: 5px;
             font-weight: 600;
         }
 

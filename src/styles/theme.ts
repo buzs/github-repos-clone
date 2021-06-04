@@ -29,6 +29,7 @@ export const themes = {
     },
     dark: {
       primary: '#1D1D1D',
+      tertiary: '#8b949e',
       black: '#c6c6c6',
       gray: '#afafaf',
       'gray-light': '#6a737d',
