@@ -12,13 +12,14 @@ const Footer: React.FC = () => {
                 <li>Status</li>
                 <li>Docs</li>
             </S.NavList>
-            <Github width={45} />
+            <S.GitIcon />
             <S.NavList>
                 <li>Contact Github</li>
                 <li>Pricing</li>
                 <li>API</li>
                 <li>Training</li>
                 <li>Blog</li>
+                <li>About</li>
             </S.NavList>
         </S.Container>
     )  

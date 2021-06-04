@@ -1,3 +1,4 @@
+import { Github } from '@styled-icons/boxicons-logos';
 import styled, { css } from 'styled-components';
 
 export const Container = styled.footer`
@@ -15,14 +16,24 @@ export const Container = styled.footer`
     }
 `
 
-export const Link = styled.a`
-    color: aliceblue;
-`
+export const GitIcon = styled(Github)`
+  fill: var(--logo);
+  opacity: 0.3;
+  width: 30px;
+  flex-shrink: 0;
+  margin: 0 60px;
+  cursor: pointer;
+
+  &:hover {
+      opacity: 0.7;
+  }
+`;
 
 export const NavList = styled.ul`
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    font-size: 12px;
     width: 100%;
     > li {
         margin: 0 10px;
