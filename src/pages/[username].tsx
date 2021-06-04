@@ -39,7 +39,7 @@ const UserProfile = () => {
   return (
     <User user={data.user} repos={data.repos} >
       <div>
-        {data?.repos?.map(repo => (<RepoItem repo={repo} />))}
+        {data?.repos?.map((repo: { name: string; description: string; topics?: string[] | undefined; stargazers_count: number; forks: number; fork: boolean; html_url: string; full_name: string; language: string; license?: { name: string } | undefined; updated_at: string; pushed_at: string }) => (<RepoItem repo={repo} />))}
       </div>
     </User>
   )
