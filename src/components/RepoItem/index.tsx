@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react'
 import { timeAgo } from '../../utils/date'
 import { Link } from '../Footer/styles'
+import { Law, Star, StarFill, RepoForked } from '@styled-icons/octicons'
 import * as S from './styles'
 
 type RepoItemProps = {
@@ -23,6 +24,7 @@ type RepoItemProps = {
 }
 
 const RepoItem: React.FC<RepoItemProps> = ({ repo }) => {
+    const [star, setStar] = useState(false);
     const [topics, setTopics] = useState<string[]>([
         "omnistack-week-11",
         "react",
@@ -64,7 +66,7 @@ const RepoItem: React.FC<RepoItemProps> = ({ repo }) => {
                     {
                         repo.stargazers_count > 0 ? (
                             <S.Stars>
-                                {repo.stargazers_count}
+                                <Star width={16} /> {repo.stargazers_count}
                             </S.Stars>
                         ) : null
                     }
@@ -72,14 +74,18 @@ const RepoItem: React.FC<RepoItemProps> = ({ repo }) => {
                     {
                         repo.fork ? (
                             <S.Fork>
-                                {repo.forks}
+                                <RepoForked width={16} /> {repo.forks}
                             </S.Fork>
                         ) : null
                     }
 
-                    <S.License>
-                        {repo.license?.name}
-                    </S.License>
+                    {
+                        repo.license ? (
+                            <S.License>
+                                <Law width={16} />{repo.license?.name}
+                            </S.License>
+                        ) : null
+                    }
 
                     <S.Updated>
                         Updated {timeAgo(Date.now(), new Date(repo.pushed_at).getTime())}
@@ -88,7 +94,7 @@ const RepoItem: React.FC<RepoItemProps> = ({ repo }) => {
                 </S.SecondaryBox>
             </S.InfoBox>
             <S.LeftBox>
-                <S.Button>Star</S.Button>
+                <S.Button onClick={()=> setStar(!star)}>{star ? <><StarFill width={16} /> Unstar</> : <><Star width={16} /> Star</> }</S.Button>
             </S.LeftBox>
         </S.Container>
     )  

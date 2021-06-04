@@ -58,6 +58,10 @@ export const Description = styled.p`
 
     padding-right: 24px;
     margin-bottom: 8px;
+
+    line-height: 150%;
+    max-width: 600px;
+    /* width: 75%; */
 `
 
 export const Topics = styled.div`
@@ -108,40 +112,54 @@ export const Language = styled.span<LanguagesProp>`
     display: flex;
     justify-content: row;
     align-items: center;
+    gap: 4px;
     
     &::before {
         content: '';
         width: 12px;
         height: 12px;
         border-radius: 9999px;
-        margin-right: 5px;
+        margin-right: 1px;
         ${({ language }) => css`
             background: var(--${language.toLowerCase()});
         `}
     }
 `
 
-export const Stars = styled.div``
+export const Stars = styled.div`
+    display: flex;
+    justify-content: row;
+    align-items: center;
+    gap: 4px;
+`
 
 export const Fork = styled.div``
 
-export const License = styled.div``
+export const License = styled.div`
+    display: flex;
+    align-items: center;
+    gap: 4px
+`
 
 export const Updated = styled.div``
 
 export const Button = styled.button`
+    display: flex;
+    align-items: center;
+
+    gap: 5px;
+
     padding: 3px 12px;
     font-size: 12px;
     line-height: 20px;
 
     color: var(--btn-text);
     background-color: var(--btn-bg);
-    border-color: var(--btn-border);
     transition: .2s cubic-bezier(.3,0,.5,1);
     transition-property: color,background-color,border-color;
 
     user-select: none;
-    border: 1px solid;
+    border: 1px solid var(--btn-border);;
     border-radius: 6px;
     appearance: none;
     white-space: nowrap;
