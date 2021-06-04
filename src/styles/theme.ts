@@ -54,7 +54,7 @@ export const themes = {
       'btn-text': '#adbac7',
       'btn-bg': '#3d444d',
       'btn-hover-bg': '#444c56',
-      'btn-border': '#444c56',
+      'btn-border': '#30363d',
       'btn-border-hover': '#768390',
 
       'topic-tag-text': '#539bf5',

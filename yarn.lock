@@ -229,6 +229,14 @@
     "@babel/runtime" "^7.14.0"
     "@styled-icons/styled-icon" "^10.6.3"
 
+"@styled-icons/octicons@^10.34.0":
+  version "10.34.0"
+  resolved "https://registry.yarnpkg.com/@styled-icons/octicons/-/octicons-10.34.0.tgz#6d532486d09b418f9e8113cd2bcf1ac5872ab9ab"
+  integrity sha512-PJzuE0BzijCm/WOa+3J9V3Gs6OkFzU/0BZkxO4rpiliKEYzewNvFLqXUhDyWJgQr5+3qLCBzvIqHJhkaYuuuAg==
+  dependencies:
+    "@babel/runtime" "^7.14.0"
+    "@styled-icons/styled-icon" "^10.6.3"
+
 "@styled-icons/styled-icon@^10.6.3":
   version "10.6.3"
   resolved "https://registry.yarnpkg.com/@styled-icons/styled-icon/-/styled-icon-10.6.3.tgz#eae0e5e18fd601ac47e821bb9c2e099810e86403"
