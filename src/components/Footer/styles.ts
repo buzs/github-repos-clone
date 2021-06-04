@@ -3,30 +3,37 @@ import styled, { css } from 'styled-components';
 
 export const Container = styled.footer`
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
+    justify-content: space-between;
     padding: 40px 0 8px;
     border-top: 1px solid var(--border);
     max-width: 1280px;
     margin: 40px auto 8px;
     
-    @media (min-width: 698px) {
-        flex-direction: row;
-        justify-content: space-between;
+    @media (max-width: 692px) {
+        margin: 0px auto;
+        padding-bottom:40px;
+        gap: 10px;
+        flex-direction: column;
     }
 `
 
 export const GitIcon = styled(Github)`
-  fill: var(--logo);
-  opacity: 0.3;
-  width: 30px;
-  flex-shrink: 0;
-  margin: 0 60px;
-  cursor: pointer;
+    fill: var(--logo);
+    opacity: 0.3;
+    width: 30px;
+    flex-shrink: 0;
+    margin: 0 60px;
+    cursor: pointer;
 
-  &:hover {
-      opacity: 0.7;
-  }
+    @media (max-width: 692px) {
+        display: none;
+    }
+
+    &:hover {
+        opacity: 0.7;
+    }
 `;
 
 export const NavList = styled.ul`
@@ -43,5 +50,9 @@ export const NavList = styled.ul`
         &:hover {
         text-decoration: underline;
         }
+    }
+
+    @media (max-width: 692px) {
+        justify-content: center;
     }
 `
