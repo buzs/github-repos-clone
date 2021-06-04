@@ -1,6 +1,5 @@
 import { useEffect, useState } from 'react'
 import { timeAgo } from '../../utils/date'
-import { Link } from '../Footer/styles'
 import { Law, Star, StarFill, RepoForked } from '@styled-icons/octicons'
 import * as S from './styles'
 
