@@ -7,7 +7,11 @@ export const Container = styled.li`
     width: 100%;
 
     border-top: 1px solid var(--border);
-    padding: 24px 0;
+    padding: 24px 15px;
+
+    @media (min-width: 768px) {
+        padding: 24px 0;
+    }
 `
 
 export const InfoBox = styled.div`
@@ -128,12 +132,15 @@ export const Language = styled.span<LanguagesProp>`
 
 export const Stars = styled.div`
     display: flex;
-    justify-content: row;
     align-items: center;
     gap: 4px;
 `
 
-export const Fork = styled.div``
+export const Fork = styled.div`
+    display: flex;
+    align-items: center;
+    gap: 4px
+`
 
 export const License = styled.div`
     display: flex;

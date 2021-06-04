@@ -7,9 +7,26 @@ export const Container = styled.div`
 
 export const AvatarBox = styled.div`
     display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 24px;
+    @media (min-width: 768px) {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+`
+
+export const AvatarProfile = styled.div`
+    display: flex;
     flex-direction: row;
     align-items: center;
-    margin-bottom: 24px;
+    gap: 18px;
+
+    > h1 {
+        display: flex;
+        flex-direction: column;
+    }
+
     @media (min-width: 768px) {
         flex-direction: column;
         align-items: flex-start;
@@ -36,7 +53,7 @@ export const Avatar = styled.img`
 export const AvatarInfo = styled.div`
     display: flex;
     flex-direction: column;
-    margin-left: 16px;
+    /* margin-left: 16px; */
     width: 100%;
 
     > strong {
@@ -57,7 +74,7 @@ export const AvatarInfo = styled.div`
 
     @media (min-width: 768px) {
         margin-left: 0;
-        margin-top: 16px;
+        margin-top: 0;
     }
 `
 
@@ -117,7 +134,11 @@ export const AvatarValue = styled.a`
     white-space: nowrap;
     text-decoration: none;
     color: var(--text-secondary);
-    font-size: 18px;
+    font-size: 15px;
+
+    @media (min-width: 768px) {
+        font-size: 18px;
+    }
 
     > strong {
         font-weight: 600;
@@ -143,13 +164,20 @@ export const AvatarBio = styled.div`
     font-size: 17px;
     margin-bottom: 16px;
     word-wrap: break-word;
+    
 `
 
 export const AvatarDetails = styled.ul`
     list-style: none;
     padding-left: 0;
-    margin-top: 0;
+    margin-top: 15px;
     margin-bottom: 0;
+    display: flex;
+    flex-direction: column-reverse;
+    @media (min-width: 768px) {
+        margin-top: 0;
+        flex-direction: column;
+    }
 `
 
 export const AvatarDetail = styled.li`
