@@ -159,6 +159,7 @@ export const AvatarValues = styled.div`
     gap: 10px;
     svg {
         fill: var(--tertiary);
+        width: 17%;
     }
 `
 
@@ -177,6 +178,8 @@ export const AvatarDetails = styled.ul`
     margin-bottom: 0;
     display: flex;
     flex-direction: column-reverse;
+    gap: 4px;
+
     @media (min-width: 768px) {
         margin-top: 0;
         flex-direction: column;
@@ -200,6 +203,7 @@ export const AvatarDetail = styled.li`
     svg {
         margin-right: 2px;
         fill: var(--tertiary);
+        width: 8%;
     }
 
     @media (min-width: 768px) {
