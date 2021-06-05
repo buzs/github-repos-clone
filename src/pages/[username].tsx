@@ -2,6 +2,7 @@ import { useRouter } from 'next/dist/client/router'
 import { useEffect, useState } from 'react'
 import RepoItem from '../components/RepoItem'
 import Tab from '../components/Tab'
+import Search from '../components/Search'
 import User from '../templates/User'
 
 
@@ -43,6 +44,7 @@ const UserProfile = () => {
       <User user={data.user} repos={data.repos} >
         <div>
           <Tab mode='mobile' repositoriesLength={data.user?.public_repos} />
+          <Search />
           {data?.repos?.map((repo: { name: string; description: string; topics?: string[] | undefined; stargazers_count: number; forks: number; fork: boolean; html_url: string; full_name: string; language: string; license?: { name: string } | undefined; updated_at: string; pushed_at: string }) => (<RepoItem repo={repo} />))}
         </div>
       </User>

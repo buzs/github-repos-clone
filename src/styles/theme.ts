@@ -43,6 +43,7 @@ export const themes = {
       logo: '#fff',
       username: '#9b9b9b',
       search: '#0e0e0e',
+      'search-border': '#21262d',
       'search-placeholder': '#c6c6c6',
       icon: '#9b9b9b',
       link: 'rgb(79, 140, 201)',
