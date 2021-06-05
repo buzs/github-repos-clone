@@ -35,6 +35,8 @@ export const themes = {
       'gray-light': '#6a737d',
       'gray-dark': '#c6c6c6',
       orange: '#fff',
+
+      horizontalPadding: '24px',
   
       header: '#181818',
       'header-text': '#cdd9e5',

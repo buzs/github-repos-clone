@@ -11,7 +11,8 @@ export const Container = styled.div`
 `
 
 export const LeftBox = styled.div`
-    margin-right: 24px;
+    margin-right: var(--horizontalPadding);
+    z-index: 3;
 
     @media (min-width: 768px) {
         width: 25%;
@@ -22,6 +23,6 @@ export const Content = styled.div`
     width: 100%;
     @media (min-width: 768px) {
         width: 75%;
-        padding: 0 24px;
+        padding: 36px 24px;
     }
 `
