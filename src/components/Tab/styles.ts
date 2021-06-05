@@ -1,12 +1,62 @@
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 
-export const Container = styled.li`
+import { TabProps } from '.'
+
+const modeModifiers = {
+    mobile: () => css`
+        margin-top: var(--verticalPadding);
+        
+        .content {
+            margin: 0 auto;
+        }
+
+        @media (min-width: 768px) {
+            display: none;
+        }
+    `,
+
+    desktop: () => css`
+        display: none;
+        
+        @media (min-width: 768px) {
+            position: absolute;
+            z-index: 3;
+            display: block;
+            .main {
+                /* left: 50%; */
+                /* transform: translate(-50%, 0%); */
+                display: flex;
+                padding: 0;
+                max-width: 1280px;
+                margin: 0 auto;
+            }
+
+            nav {
+                margin: 0;
+                padding: 0 24px;
+            }
+            
+            .offset {
+                width: 25%;
+                margin-left: 18px;
+            }
+        }
+    `
+}
+
+export const Container = styled.div<TabProps>`
     background: var(--primary);
     display: flex;
     margin-bottom: 15px;
     width: 100%;
-    border-bottom: 1px solid var(--tertiary);
+    border-bottom: 1px solid var(--border);
     padding: 0 15px;
+
+    nav {
+        margin: auto;
+        display: flex;
+        flex-direction: row;
+    }
 
     .content {
         display: flex;
@@ -44,32 +94,8 @@ export const Container = styled.li`
         border-bottom: 1px solid var(--border);
         margin-left: -50vw;
     }
-    &.mobile {
-        margin-top: var(--verticalPadding);
-        
-        .content {
-            margin: 0 auto;
-        }
-
-        @media (min-width: 768px) {
-            display: none;
-        }
-    }
-
-    &.desktop {
-        display: none;
-        
-        @media (min-width: 768px) {
-            display: unset;
-            .wrapper {
-                display: flex;
-                margin: 0 auto;
-                max-width: 1280px;
-            }
-            .offset {
-                width: 25%;
-                margin-right: var(--horizontalPadding);
-            }
-        }
-    }
+    
+    ${({ mode }) => css`
+        ${!!mode && modeModifiers[mode]()}
+    `}
 `
