@@ -50,11 +50,15 @@ const ProfileInfo: React.FC<ProfileInfoProps> = ({ user }) => {
                             <strong>{user.following}</strong> following
                         </S.AvatarValue>
                     </S.AvatarValues>
-                    <S.AvatarDetail>
-                        <a href={`http://github.com/${user.company?.substring(1)}`}>
-                            <Organization width={18} /><strong>{user.company}</strong>
-                        </a>
-                    </S.AvatarDetail>
+                    {
+                        user.company ? (
+                            <S.AvatarDetail>
+                                <a href={`http://github.com/${user.company?.substring(1)}`}>
+                                    <Organization width={18} /><strong>{user.company}</strong>
+                                </a>
+                            </S.AvatarDetail>
+                        ) : null
+                    }
                     {
                         user.location ? (
                             <S.AvatarDetail>
@@ -69,9 +73,13 @@ const ProfileInfo: React.FC<ProfileInfoProps> = ({ user }) => {
                             </S.AvatarDetail>
                         ) : null
                     }
-                    <S.AvatarDetail>
-                        <Link width={18}/> <a href={`http://${user.blog}`}>{user.blog}</a>
-                    </S.AvatarDetail>
+                    {
+                        user.blog ? (
+                            <S.AvatarDetail>
+                                <Link width={18}/> <a href={`http://${user.blog}`}>{user.blog}</a>
+                            </S.AvatarDetail>
+                        ) : null
+                    }
                     {
                         user.twitter_username ? (
                             <S.AvatarDetail>
