@@ -38,12 +38,15 @@ const UserProfile = () => {
   }
 
   return (
-    <User user={data.user} repos={data.repos} >
-      <Tab repositoriesLength={data.user?.public_repos} />
-      <div>
-        {data?.repos?.map((repo: { name: string; description: string; topics?: string[] | undefined; stargazers_count: number; forks: number; fork: boolean; html_url: string; full_name: string; language: string; license?: { name: string } | undefined; updated_at: string; pushed_at: string }) => (<RepoItem repo={repo} />))}
-      </div>
-    </User>
+    <>
+      <Tab mode='desktop' repositoriesLength={data.user?.public_repos} />
+      <User user={data.user} repos={data.repos} >
+        <div>
+          <Tab mode='mobile' repositoriesLength={data.user?.public_repos} />
+          {data?.repos?.map((repo: { name: string; description: string; topics?: string[] | undefined; stargazers_count: number; forks: number; fork: boolean; html_url: string; full_name: string; language: string; license?: { name: string } | undefined; updated_at: string; pushed_at: string }) => (<RepoItem repo={repo} />))}
+        </div>
+      </User>
+    </>
   )
 }
 
