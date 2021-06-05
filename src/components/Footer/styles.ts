@@ -10,6 +10,10 @@ export const Container = styled.footer`
     border-top: 1px solid var(--border);
     max-width: 1280px;
     margin: 40px auto 8px;
+
+    svg {
+        max-width: 30px;
+    }
     
     @media (max-width: 692px) {
         margin: 0px auto;

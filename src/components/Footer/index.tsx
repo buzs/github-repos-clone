@@ -1,5 +1,4 @@
 import * as S from './styles'
-import {Github} from '@styled-icons/boxicons-logos/Github'
 
 const Footer: React.FC = () => {
     return (
