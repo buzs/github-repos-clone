@@ -15,7 +15,7 @@ export const Input = styled.input`
     padding: 5px 12px;
     font-size: 14px;
     line-height: 20px;
-    color: var(--primary);
+    color: var(--black);
     vertical-align: middle;
     background: var(--search);
     /* border: 1px solid var(--search-border); */

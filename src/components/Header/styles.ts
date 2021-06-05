@@ -65,7 +65,7 @@ export const SearchBar = styled.input`
   margin-right: 10px;
 
   background-color: var(--search);
-  color: var(--primary);
+  color: var(--black);
   padding: 0 12px;
   border-radius: 5px;
   transition: 0.2s;
