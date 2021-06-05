@@ -24,11 +24,12 @@ type RepoItemProps = {
 
 const RepoItem: React.FC<RepoItemProps> = ({ repo }) => {
     const [star, setStar] = useState(false);
+    const [stars, setStars] = useState(repo.stargazers_count);
     const [topics, setTopics] = useState<string[]>([
-        "omnistack-week-11",
-        "react",
-        "react-native",
-        "sqlite3"
+        "web",
+        "newtech",
+        "2021",
+        "challenge"
     ])
 
     return (
@@ -63,9 +64,9 @@ const RepoItem: React.FC<RepoItemProps> = ({ repo }) => {
                     }
 
                     {
-                        repo.stargazers_count > 0 ? (
+                        stars > 0 ? (
                             <S.Stars>
-                                <Star width={16} /> {repo.stargazers_count}
+                                <Star width={16} /> {stars}
                             </S.Stars>
                         ) : null
                     }
@@ -93,7 +94,10 @@ const RepoItem: React.FC<RepoItemProps> = ({ repo }) => {
                 </S.SecondaryBox>
             </S.InfoBox>
             <S.LeftBox>
-                <S.Button onClick={()=> setStar(!star)}>{star ? <><StarFill width={16} /> Unstar</> : <><Star width={16} /> Star</> }</S.Button>
+                <S.Button onClick={()=> {
+                    setStar(!star)
+                    setStars(star ? stars - 1 : stars + 1)
+                }}>{star ? <><StarFill width={16} /> Unstar</> : <><Star width={16} /> Star</> }</S.Button>
             </S.LeftBox>
         </S.Container>
     )  
