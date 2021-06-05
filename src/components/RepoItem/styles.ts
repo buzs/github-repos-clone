@@ -178,3 +178,8 @@ export const Button = styled.button`
         border-color: var(--btn-border-hover);
     }
 `
+
+export const Graph = styled.iframe`
+    width: 155;
+    height: 28;
+`
