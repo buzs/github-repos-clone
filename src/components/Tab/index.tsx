@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import {Book, Repo, Project, PackageIcon} from '@styled-icons/octicons'
 import * as S from './styles'
 
 const TabContent = ({repositoriesLength}: any) => (
@@ -6,11 +7,11 @@ const TabContent = ({repositoriesLength}: any) => (
     <div className="offset"></div>
     <nav>
       <div className="content">
-        <span className="label">Overview</span>
+        <span className="label"><Book /> Overview</span>
       </div>
       
       <div className="content active">
-        <span className="label">Repositories</span>
+        <span className="label"><Repo /> Repositories</span>
         {
           repositoriesLength > 0 ? (
             <span className="number">{repositoriesLength}</span>
@@ -18,10 +19,10 @@ const TabContent = ({repositoriesLength}: any) => (
         }
       </div>
       <div className="content">
-        <span className="label">Projects</span>
+        <span className="label"><Project />Projects</span>
       </div>
       <div className="content">
-        <span className="label">Packages</span>
+        <span className="label"><PackageIcon />Packages</span>
       </div>
     </nav>
   </div>

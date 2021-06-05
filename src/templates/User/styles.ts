@@ -23,6 +23,6 @@ export const Content = styled.div`
     width: 100%;
     @media (min-width: 768px) {
         width: 75%;
-        padding: 36px 24px;
+        padding: 50px 24px;
     }
 `

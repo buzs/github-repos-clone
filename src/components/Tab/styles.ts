@@ -5,6 +5,7 @@ import { TabProps } from '.'
 const modeModifiers = {
     mobile: () => css`
         margin-top: var(--verticalPadding);
+        justify-content: center;
         
         .content {
             margin: 0 auto;
@@ -62,7 +63,7 @@ export const Container = styled.div<TabProps>`
         display: flex;
         align-items: center;
         width: 100%;
-        padding: 8px 12px;
+        padding: 15px 12px;
         justify-content: center;
         border-bottom: 2px solid transparent;
         cursor: pointer;
@@ -79,6 +80,19 @@ export const Container = styled.div<TabProps>`
             font-size: 14px;
             font-weight: 600;
             padding: 0 7px;
+            display: flex;
+            gap: 10px;
+            color: var(--tertiary);
+            font-weight: 500;
+            font-size: 0.95rem;
+
+            svg {
+                width: 18px;
+                @media (max-width: 768px) {
+                    display: none;
+                }
+                fill: var(--tertiary);
+            }
         }
 
         .number {
