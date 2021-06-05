@@ -22,15 +22,20 @@ type RepoItemProps = {
     }
 }
 
+const random = (min: number, max: number) => {
+    return min + Math.random() * (max - min);
+}
+
 const RepoItem: React.FC<RepoItemProps> = ({ repo }) => {
+    var items = ["web","newtech","2021","challenge"];
+    var randomIndex = Math.floor(Math.random() * items.length);
+    var randomItem = items.splice(randomIndex, random(0, items.length));
+
     const [star, setStar] = useState(false);
     const [stars, setStars] = useState(repo.stargazers_count);
-    const [topics, setTopics] = useState<string[]>([
-        "web",
-        "newtech",
-        "2021",
-        "challenge"
-    ])
+    const [topics, setTopics] = useState<string[]>(randomItem)
+
+   
 
     return (
         <S.Container>

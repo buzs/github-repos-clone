@@ -69,7 +69,7 @@ export const Description = styled.p`
 `
 
 export const Topics = styled.div`
-    height: 30px;
+    /* height: 30px; */
     overflow: hidden;
 
     display: inline-flex;
