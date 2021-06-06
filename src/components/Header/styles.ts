@@ -80,6 +80,11 @@ export const SearchBar = styled.input`
 export const Switch = styled.div`
   display: flex;
 
+  @media (max-width: 692px) {
+    position: absolute;
+    right: 15px;
+  }
+
   input {
     height: 0;
     width: 0;
