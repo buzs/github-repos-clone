@@ -74,6 +74,9 @@ export const Container = styled.div<TabProps>`
 
         &.active {
             border-bottom: 2px solid var(--orange);
+            .label {
+                font-weight: 700;
+            }
         }
         
         .label {

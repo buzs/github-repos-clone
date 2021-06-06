@@ -166,7 +166,7 @@ export const Button = styled.button`
     transition-property: color,background-color,border-color;
 
     user-select: none;
-    border: 1px solid var(--btn-border);;
+    border: 1px solid var(--btn-border);
     border-radius: 6px;
     appearance: none;
     white-space: nowrap;

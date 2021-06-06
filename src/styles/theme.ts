@@ -1,21 +1,41 @@
 export const themes = {
     light: {
       primary: '#fff',
+      tertiary: '#24292e',
       black: '#1b1f23',
       gray: '#586069',
       'gray-light': '#6a737d',
       'gray-dark': '#24292e',
       orange: '#f9826c',
+
+      horizontalPadding: '24px',
   
       header: '#24292e',
+      'header-text': '#cdd9e5',
       logo: '#fff',
+      'logo-footer': '#1b1f23',
       username: '#666',
       search: 'rgba(255, 255, 255, 0.13)',
+      'search-header': '#24292e',
+      'search-header-border': '#444d56',
+      'search-border': '#e1e4e8',
       'search-placeholder': 'hsla(0,0%,100%,.75)',
       icon: '#6a737d',
       link: '#0366d6',
+      'text-primary': '#24292e',
+      'text-secondary': '#586069',
       border: '#e1e4e8',
       ticker: 'rgba(209,213,218,.5)',
+
+      'btn-text': '#24292e',
+      'btn-bg': '#fafbfc',
+      'btn-hover-bg': '#f3f4f6',
+      'btn-border': '#1b1f2326',
+      'btn-border-hover': '#1b1f2326',
+
+      'topic-tag-text': '#539bf5',
+      'topic-tag-bg': 'rgba(65, 132, 228, 0.1)',
+      'topic-tag-hover-bg': 'rgba(65, 132, 228, 0.2)',
   
       'calendar-scale-0': '#ebedf0',
       'calendar-scale-1': '#9BE9A8',
@@ -25,7 +45,14 @@ export const themes = {
   
       javascript: '#f1e05a',
       typescript: '#2b7489',
-      'other-language': '#8257e5',
+      scss: '#c6538a',
+      go: '#00add8',
+      elixir: '#6e4a7e',
+      html: '#e34c26',
+      'c#': '#178600',
+      python: '#3572A5',
+      'c++': '#f34b7d',
+      'other-language': '#824',
     },
     dark: {
       primary: '#1D1D1D',
@@ -43,6 +70,8 @@ export const themes = {
       logo: '#fff',
       username: '#9b9b9b',
       search: '#0e0e0e',
+      'search-header': '#0e0e0e',
+      'search-header-border': '#21262d',
       'search-border': '#21262d',
       'search-placeholder': '#c6c6c6',
       icon: '#9b9b9b',
@@ -82,7 +111,7 @@ export const themes = {
       'c++': '#f34b7d',
       'other-language': '#824',
     },
-  };
+  } as const;
   
   export type ThemeName = keyof typeof themes;
   export type ThemeType = typeof themes.light | typeof themes.dark;

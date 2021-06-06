@@ -24,7 +24,7 @@ export const Container = styled.footer`
 `
 
 export const GitIcon = styled(Github)`
-    fill: var(--logo);
+    fill: var(--logo-footer);
     opacity: 0.3;
     width: 30px;
     flex-shrink: 0;

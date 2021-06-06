@@ -20,7 +20,8 @@ type ProfileInfoProps = {
 }
 
 const ProfileInfo: React.FC<ProfileInfoProps> = ({ user }) => {
-    const [follow, setFollow] = useState(false);
+    const [follow, setFollow] = useState(false)
+    const [followers, setFollowers] = useState(user?.followers || 0)
 
     return (
         <S.Container>
@@ -35,7 +36,10 @@ const ProfileInfo: React.FC<ProfileInfoProps> = ({ user }) => {
                 <S.AvatarInfo>
                     <S.AvatarDescription>
                         <S.AvatarBio>{user.bio}</S.AvatarBio>
-                        <S.FollowButton onClick={() => setFollow(!follow) }>{follow ? 'Unfollow' : 'Follow'}</S.FollowButton>
+                        <S.FollowButton onClick={() => {
+                            setFollow(!follow)
+                            setFollowers(follow ? followers - 1 : followers + 1)
+                        }}>{follow ? 'Unfollow' : 'Follow'}</S.FollowButton>
                     </S.AvatarDescription>
                 </S.AvatarInfo>
                 {/* <S.AvatarOrgs>
@@ -44,7 +48,7 @@ const ProfileInfo: React.FC<ProfileInfoProps> = ({ user }) => {
                 <S.AvatarDetails>
                     <S.AvatarValues>
                         <S.AvatarValue>
-                            <People width={20} /> <strong>{user.followers}</strong> followers
+                            <People width={20} /> <strong>{followers}</strong> followers
                         </S.AvatarValue>
                         <S.AvatarValue>
                             <strong>{user.following}</strong> following

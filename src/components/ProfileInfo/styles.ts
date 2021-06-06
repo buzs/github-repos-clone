@@ -21,6 +21,7 @@ export const AvatarProfile = styled.div`
     flex-direction: row;
     align-items: center;
     gap: 18px;
+    width: 100%;
 
     > h1 {
         display: flex;
@@ -125,7 +126,7 @@ export const FollowButton = styled.button`
 
     &:hover {
         background-color: var(--btn-hover-bg);
-        border-color: var(--btn-hover-border);
+        border-color: var(--btn-border-hover);
         transition-duration: .1s;
     }
 `

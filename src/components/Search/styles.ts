@@ -18,7 +18,7 @@ export const Input = styled.input`
     color: var(--black);
     vertical-align: middle;
     background: var(--search);
-    /* border: 1px solid var(--search-border); */
+    border: 1px solid var(--search-border);
     border-radius: 6px;
 `
 
