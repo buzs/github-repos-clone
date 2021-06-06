@@ -43,7 +43,7 @@ const RepoItem: React.FC<RepoItemProps> = ({ repo }) => {
                 response.text().then(text => setGraph(text))
             })
         }
-    }, [])
+    }, [repo.full_name])
 
     return (
         <S.Container>
