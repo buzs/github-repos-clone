@@ -33,18 +33,17 @@ const RepoItem: React.FC<RepoItemProps> = ({ repo }) => {
 
     
     const [star, setStar] = useState(false);
-    const [stars, setStars] = useState(repo.stargazers_count);
+    const [stars, setStars] = useState(repo?.stargazers_count || 0);
     const [topics, setTopics] = useState<string[]>(randomItem)
     const [graph, setGraph] = useState<any>();
     
-    // useEffect(() => {
-    //     fetch(`https://github.com/${repo.full_name}/graphs/participation?w=155&h=28&type=sparkline`, { mode: 'no-cors' }).then(response => {
-    //         response.blob().then(console.log)
-    //         // response.html().then(blob => setGraph(blob))
-    //     })
-
-    // }, [])
-
+    useEffect(() => {
+        if (repo?.full_name) {
+            fetch(`/api/graphs/${repo.full_name}`).then(response => {
+                response.text().then(text => setGraph(text))
+            })
+        }
+    }, [])
 
     return (
         <S.Container>
@@ -112,8 +111,9 @@ const RepoItem: React.FC<RepoItemProps> = ({ repo }) => {
                     setStar(!star)
                     setStars(star ? stars - 1 : stars + 1)
                 }}>{star ? <><StarFill width={16} /> Unstar</> : <><Star width={16} /> Star</> }</S.Button>
-                {graph}
-                {/* <S.Graph src={`https://github.com/${repo.full_name}/graphs/participation?w=155&h=28&type=sparkline`} /> */}
+                <S.Graph>
+                    <div dangerouslySetInnerHTML={{__html: graph}}></div>
+                </S.Graph>
             </S.LeftBox>
         </S.Container>
     )  

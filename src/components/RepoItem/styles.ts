@@ -20,7 +20,9 @@ export const InfoBox = styled.div`
 
 export const LeftBox = styled.div`
     display: flex;
-    justify-content: row;
+    flex-direction: column;
+    gap: 20px;
+    align-items: flex-end;
 `
 
 export const Title = styled.h3`
@@ -159,6 +161,7 @@ export const Button = styled.button`
     padding: 3px 12px;
     font-size: 12px;
     line-height: 20px;
+    width: max-content;
 
     color: var(--btn-text);
     background-color: var(--btn-bg);
@@ -179,7 +182,7 @@ export const Button = styled.button`
     }
 `
 
-export const Graph = styled.iframe`
+export const Graph = styled.div`
     width: 155;
     height: 28;
 `
