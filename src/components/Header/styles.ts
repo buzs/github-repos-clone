@@ -44,7 +44,7 @@ export const NavMenu = styled.div`
 `
 
 export const NavLink = styled.strong`
-  color: var(--black);
+  color: var(--header-text);
   font-weight: 600;
   white-space: nowrap;
   font-size: 16px;
@@ -64,7 +64,8 @@ export const SearchBar = styled.input`
   font-size: 15px;
   margin-right: 10px;
 
-  background-color: var(--search);
+  background-color: var(--search-header);
+  border: 1px solid var(--search-header-border);
   color: var(--black);
   padding: 0 12px;
   border-radius: 5px;
@@ -74,3 +75,51 @@ export const SearchBar = styled.input`
     width: 80%;
   }
 `;
+
+
+export const Switch = styled.div`
+  display: flex;
+
+  input {
+    height: 0;
+    width: 0;
+    visibility: hidden;
+  
+    &:checked + label span {
+      left: calc(100%);
+      transform: translateX(-100%);
+    }
+  }
+
+  label {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+    width: 40px;
+    height: 20px;
+    background: grey;
+    border-radius: 100px;
+    position: relative;
+    transition: background-color .2s;
+
+    &:active {
+      span {
+        width: 20px;
+      }
+    }
+
+    span {
+      content: '';
+      position: absolute;
+      top: 0px;
+      left: 0px;
+      width: 20px;
+      height: 20px;
+      border-radius: 45px;
+      transition: 0.2s;
+      background: #fff;
+      box-shadow: 0 0 2px 0 rgba(10, 10, 10, 0.29);
+    }
+  }
+`

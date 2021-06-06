@@ -1,11 +1,12 @@
+import { Suspense } from "react"
 import Footer from "../components/Footer"
-import Header from "../components/Header"
+import Header, { HeaderProps } from "../components/Header"
 
-const Layout: React.FC = ({children}) => {
+const Layout: React.FC<HeaderProps> = ({children, isOn, handleToggle}) => {
 
     return (
         <>
-            <Header />
+            <Header isOn={isOn} handleToggle={handleToggle} />
                 {children}
             <Footer />
         </>
